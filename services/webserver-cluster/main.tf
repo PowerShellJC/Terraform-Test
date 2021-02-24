@@ -43,7 +43,7 @@ resource "aws_autoscaling_group" "example" {
   availability_zones   = data.aws_availability_zones.all.names
   min_size = var.min_size
   max_size = var.max_size
-  desired_capacity = 4
+  desired_capacity = 3
   
   load_balancers    = [aws_elb.example.name]
   health_check_type = "ELB"
